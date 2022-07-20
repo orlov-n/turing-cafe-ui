@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ReservationsContainer from '../ReservationsContainer/ReservationsContainer';
 import Form from '../Form/Form';
-import { getReservations } from '../apiCalls'
+import { getReservations, postReservation } from '../apiCalls'
 
 
 class App extends Component {
