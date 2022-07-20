@@ -44,7 +44,7 @@ class Form extends Component {
         <input type='text' placeholder='Date' onInput={(event) => this.displayDate(event)}/>
         <input type='text' placeholder='Time' onInput={(event) => this.displayTime(event)}/>
         <input type='text' placeholder='Number of guests' onInput={(event) => this.displayNumberOfGuests(event)}/>
-
+        <button onClick={() => this.props.saveReservation(this.state)}>Make Reservation</button>
       </div>
     )
   }
