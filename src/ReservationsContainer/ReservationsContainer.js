@@ -1,5 +1,6 @@
 import React from 'react';
 import Reservation from '../Reservation/Reservation';
+import './ReservationsContainer.css'
       //sample object: {id: 1, name: 'Christie', date: '12/29', time: '7:00', number: 12}
 
 
@@ -11,7 +12,7 @@ const ReservationsContainer = ({reservations}) => {
     )
   })
   return (
-    <div>
+    <div className='reservations-container'>
       {returnedReservations}
     </div>
   )
