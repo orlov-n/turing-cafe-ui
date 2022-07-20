@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import ReservationsContainer from '../ReservationsContainer/ReservationsContainer';
 import { getReservations } from '../apiCalls'
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       reservations: []
+      //sample object: {id: 1, name: 'Christie', date: '12/29', time: '7:00', number: 12}
     }
   }
 
@@ -20,7 +22,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
+    console.log(this.state.reservations)
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
