@@ -4,7 +4,7 @@ import React from "react";
 const Reservation = ({reservation}) => {
   return (
     <div>
-      <p>{console.log('this is sliced time', reservation.date.slice(0, 2))}</p>
+      {/* <p>{console.log('this is sliced time', reservation.date.slice(0, 2))}</p> */}
       <p>{reservation.name}</p>
       {/* <p>{reservation.date.slice(0, 2) !== 12 ? 0 + reservation.date.slice(0, 1) : reservation.date.slice(0, 2)}</p> */}
       <p>{reservation.date}</p>
