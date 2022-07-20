@@ -3,8 +3,7 @@ import './App.css';
 import ReservationsContainer from '../ReservationsContainer/ReservationsContainer';
 import Form from '../Form/Form';
 import { getReservations, postReservation } from '../apiCalls'
-
-
+      
 class App extends Component {
   constructor() {
     super();
@@ -24,8 +23,14 @@ class App extends Component {
   }
 
   saveReservation = (reservation) => {
-    this.setState({
-      reservations: [...this.state.reservations, reservation]
+    reservation.id = Date.now
+//sample object: {id: 1, name: 'Christie', date: '12/29', time: '7:00', number: 12}
+    postReservation(reservation).then(data => {
+
+      this.setState({
+        reservations: [...this.state.reservations, reservation]
+    })
+    // const compared
     })
 
   }

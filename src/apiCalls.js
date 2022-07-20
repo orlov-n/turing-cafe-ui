@@ -12,8 +12,12 @@ const postReservation = (reservation) => {
       date: reservation.date, 
       time: reservation.time, 
       number: reservation.number 
+    }),
+    headers: {
+      'Content-type': 'application/json'
+    }
     })
-    })
+    .then(result => result.json())
   }
 
 
